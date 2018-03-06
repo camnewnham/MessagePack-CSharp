@@ -10,7 +10,7 @@
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU' AND '$(TargetFramework)' != 'net45'">
         <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-        <DefineConstants>TRACE;DEBUG;NETSTANDARD;ENABLE_UNSAFE_MSGPACK;</DefineConstants>
+        <DefineConstants>TRACE;DEBUG;NETSTANDARD;ENABLE_UNSAFE_MSGPACK;;NETSTANDARD1_6;NET_NATIVE;</DefineConstants>
         <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
         <LangVersion>7</LangVersion>
     </PropertyGroup>
@@ -19,7 +19,7 @@
         <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
         <DocumentationFile>bin\Release\netstandard2.0\MessagePack.xml</DocumentationFile>
         <NoWarn>1701;1702;1705;1591</NoWarn>
-        <DefineConstants>TRACE;RELEASE;NETSTANDARD;ENABLE_UNSAFE_MSGPACK;</DefineConstants>
+        <DefineConstants>TRACE;RELEASE;NETSTANDARD;ENABLE_UNSAFE_MSGPACK;;RELEASE;NETSTANDARD1_6;NETCORE;RELEASE;NETSTANDARD1_6;NET_NATIVE;</DefineConstants>
         <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
         <LangVersion>7</LangVersion>
     </PropertyGroup>

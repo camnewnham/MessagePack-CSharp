@@ -1,4 +1,4 @@
-﻿#if !UNITY_WSA
+﻿#if !UNITY_WSA && !NET_NATIVE
 
 using System;
 using System.Linq;

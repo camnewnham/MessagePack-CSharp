@@ -1,4 +1,4 @@
-﻿#if NETSTANDARD
+﻿#if NETSTANDARD && !NET_NATIVE
 using MessagePack.Formatters;
 
 namespace MessagePack.Resolvers

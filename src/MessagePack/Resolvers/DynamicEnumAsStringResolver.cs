@@ -1,4 +1,4 @@
-﻿#if !UNITY_WSA
+﻿#if !UNITY_WSA && !NET_NATIVE
 
 using MessagePack.Formatters;
 using MessagePack.Internal;

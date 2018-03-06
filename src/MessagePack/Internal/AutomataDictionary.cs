@@ -171,11 +171,12 @@ namespace MessagePack.Internal
         }
 
         // IL Emit
-
+#if !NET_NATIVE
         public void EmitMatch(ILGenerator il, LocalBuilder p, LocalBuilder rest, LocalBuilder key, Action<KeyValuePair<string, int>> onFound, Action onNotFound)
         {
             root.EmitSearchNext(il, p, rest, key, onFound, onNotFound);
         }
+#endif
 
         class AutomataNode : IComparable<AutomataNode>
         {
@@ -334,6 +335,7 @@ namespace MessagePack.Internal
                 }
             }
 
+#if !NET_NATIVE
             // SearchNext(ref byte* p, ref int rest, ref ulong key)
             public void EmitSearchNext(ILGenerator il, LocalBuilder p, LocalBuilder rest, LocalBuilder key, Action<KeyValuePair<string, int>> onFound, Action onNotFound)
             {
@@ -453,6 +455,7 @@ namespace MessagePack.Internal
                     EmitSearchNextCore(il, p, rest, key, onFound, onNotFound, r, r.Length);
                 }
             }
+#endif
         }
     }
 

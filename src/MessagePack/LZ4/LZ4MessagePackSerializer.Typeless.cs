@@ -1,5 +1,4 @@
-﻿#if NETSTANDARD
-
+﻿#if NETSTANDARD && !NET_NATIVE
 using System;
 using System.Collections.Generic;
 using System.Text;

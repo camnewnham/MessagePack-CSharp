@@ -182,7 +182,7 @@ namespace MessagePack.Internal
             MessagePack.Unity.UnityResolver.Instance,
 #endif
 
-#if !ENABLE_IL2CPP && !UNITY_WSA
+#if !ENABLE_IL2CPP && !UNITY_WSA && !NET_NATIVE
 
             DynamicEnumResolver.Instance, // Try Enum
             DynamicGenericResolver.Instance, // Try Array, Tuple, Collection
@@ -197,7 +197,7 @@ namespace MessagePack.Internal
 
         static readonly IFormatterResolver[] resolvers = StandardResolverHelper.DefaultResolvers.Concat(new IFormatterResolver[]
         {
-#if !ENABLE_IL2CPP && !UNITY_WSA
+#if !ENABLE_IL2CPP && !UNITY_WSA && !NET_NATIVE
             DynamicObjectResolver.Instance, // Try Object
 #endif
         }).ToArray();
@@ -236,7 +236,7 @@ namespace MessagePack.Internal
 
         static readonly IFormatterResolver[] resolvers = StandardResolverHelper.DefaultResolvers.Concat(new IFormatterResolver[]
         {
-#if !ENABLE_IL2CPP && !UNITY_WSA
+#if !ENABLE_IL2CPP && !UNITY_WSA && !NET_NATIVE
             DynamicObjectResolver.Instance, // Try Object
             DynamicContractlessObjectResolver.Instance, // Serializes keys as strings
 #endif
@@ -277,7 +277,7 @@ namespace MessagePack.Internal
 
         static readonly IFormatterResolver[] resolvers = StandardResolverHelper.DefaultResolvers.Concat(new IFormatterResolver[]
         {
-#if !ENABLE_IL2CPP && !UNITY_WSA
+#if !ENABLE_IL2CPP && !UNITY_WSA && !NET_NATIVE
             DynamicObjectResolverAllowPrivate.Instance, // Try Object
 #endif
         }).ToArray();
@@ -316,7 +316,7 @@ namespace MessagePack.Internal
 
         static readonly IFormatterResolver[] resolvers = StandardResolverHelper.DefaultResolvers.Concat(new IFormatterResolver[]
         {
-#if !ENABLE_IL2CPP && !UNITY_WSA
+#if !ENABLE_IL2CPP && !UNITY_WSA && !NET_NATIVE
             DynamicObjectResolverAllowPrivate.Instance, // Try Object
             DynamicContractlessObjectResolverAllowPrivate.Instance, // Serializes keys as strings
 #endif
